@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="borderColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressView">
+        <attr name="progressColor" format="color" />
+        <attr name="thickness" format="dimension" />
+        <attr name="progressTextSize" format="dimension" />
+        <attr name="progress" format="integer" />
+        <attr name="maxProgress" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomProgressBar">
+        <attr name="lineProgressColor" format="color" />
+        <attr name="lineThickness" format="dimension" />
+        <attr name="lineProgress" format="integer" />
+        <attr name="lineMaxProgress" format="integer" />
+    </declare-styleable>
+
+</resources>

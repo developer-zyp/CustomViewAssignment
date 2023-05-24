@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_medium"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium_2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In Progress"
+                android:textColor="@color/orange_700" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_longtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_status"
+                android:layout_alignParentEnd="true"
+                android:text="3h"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_status"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="Contact Page"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_regular_3x"
+                android:textStyle="bold" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_task"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                app:srcCompat="@drawable/ic_message_24"
+                app:tint="@color/grey_500" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_message"
+                android:layout_marginHorizontal="@dimen/margin_small"
+                android:layout_toEndOf="@id/img_message"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_attachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_task"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_toEndOf="@id/tv_message"
+                app:srcCompat="@drawable/ic_attach_file_24"
+                app:tint="@color/grey_500" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_attachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_message"
+                android:layout_marginHorizontal="@dimen/margin_small"
+                android:layout_toEndOf="@id/img_attachment"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_task_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/img_task_profile"
+                android:layout_alignBottom="@+id/img_task_profile"
+                android:layout_marginHorizontal="@dimen/margin_small"
+                android:layout_toStartOf="@id/img_task_profile"
+                android:gravity="center"
+                android:text="N 163"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <com.zyp.customviewassignment.views.components.CircleImageView
+                android:id="@+id/img_task_profile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/tv_task"
+                android:layout_alignParentEnd="true"
+                app:borderColor="@color/orange_500"
+                app:srcCompat="@drawable/avatar_1" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

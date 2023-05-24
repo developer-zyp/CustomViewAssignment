@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.ProfileActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/margin_xxlarge"
+        android:layout_height="@dimen/margin_xxlarge"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/margin_medium_2"
+        android:background="@drawable/bg_round_button"
+        android:backgroundTint="@color/white"
+        android:scaleType="center"
+        app:srcCompat="@drawable/ic_close_24" />
+
+    <include
+        android:id="@+id/vp_profile"
+        layout="@layout/view_pod_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/vp_profile"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_message"
+            android:layout_width="150dp"
+            android:layout_height="@dimen/margin_xxlarge"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_round_button"
+            android:text="Message"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.zyp.customviewassignment.views.components.CircleImageView
+            android:layout_width="@dimen/margin_xxlarge"
+            android:layout_height="@dimen/margin_xxlarge"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/btn_message"
+            android:scaleType="center"
+            app:borderColor="@color/green_A400"
+            app:srcCompat="@drawable/ic_share_24"
+            app:tint="@color/green_A400" />
+
+        <com.zyp.customviewassignment.views.components.CircleImageView
+            android:layout_width="@dimen/margin_xxlarge"
+            android:layout_height="@dimen/margin_xxlarge"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/btn_message"
+            android:scaleType="center"
+            app:borderColor="@color/green_A400"
+            app:srcCompat="@drawable/ic_assignment_turned_in_24"
+            app:tint="@color/green_A400" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_message"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            app:tabIndicatorColor="@color/green_A400"
+            app:tabMode="scrollable"
+            app:tabTextColor="@color/black" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_tasks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tab_profile"
+            android:layout_alignParentBottom="true"
+            android:background="@color/light_blue_50"
+            android:clipToPadding="false"
+            android:padding="@dimen/margin_medium_2" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
